@@ -1,5 +1,6 @@
 package com.kaurvandana.kv.learn.spring;
 
+import com.kaurvandana.kv.learn.spring.seva.AutowireSeva;
 import com.kaurvandana.kv.learn.spring.seva.BeanSeva;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,6 +26,11 @@ public class Application {
 //		BeanSeva class needs to be annotated by the @Component
 		BeanSeva beanSevaObject = contextObject.getBean(BeanSeva.class);
 		beanSevaObject.code();
+		beanSevaObject.callAutowireSeva();
+
+
+		AutowireSeva autowireSeva = contextObject.getBean(AutowireSeva.class);
+		autowireSeva.iamAutowireSeva();
 	}
 
 }

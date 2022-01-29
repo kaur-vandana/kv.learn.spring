@@ -6,6 +6,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class BeanSeva {
 
+//  if we don't add the @Autowired, we get java.lang.NullPointerException :
+//  Cannot invoke "com.kaurvandana.kv.learn.spring.seva.AutowireSeva.iamAutowireSeva()" because "this.autowireSeva" is null
     @Autowired
     private AutowireSeva autowireSeva;
 
